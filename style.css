@@ -1,0 +1,60 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: #d1d1d1;
+}
+
+header h1 {
+	text-align: center;
+	font-weight: 600;
+	font-size: 3rem;
+}
+
+header hr {
+	width: 25%;
+	margin: auto;
+	margin-bottom: 3rem;
+}
+
+table {
+	width: 90%;
+	margin: auto;
+}
+
+table tr {
+	cursor: default;
+}
+
+table th {
+	text-align: center;
+}
+
+table td {
+	overflow: hidden;
+	white-space: nowrap;
+	text-align: center;
+}
+
+table .btn-edit {
+	color: #0d47a1;
+	cursor: pointer;
+	display: none;
+}
+
+table .btn-delete {
+	color: #b71c1c;
+	cursor: pointer;
+	display: none;
+}
+
+table tr:hover .btn-edit{
+	display: inline-block;
+}
+
+table tr:hover .btn-delete{
+	display: inline-block;
+}

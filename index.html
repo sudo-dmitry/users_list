@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+	<title>Users table</title>
+</head>
+<body>
+	<header>
+		<h1>Список пользователей</h1>
+		<hr>
+	</header>
+	<table id="table" class="highlight">
+		<thead>
+			<tr>
+				<th>ФИО</th>
+				<th>Дата рождения</th>
+				<th>Место рождения</th>
+				<th>Электронная почта</th>
+				<th>Телефон</th>
+				<th>Зарегистрирован</th>
+				<th>Посещение</th>
+				<th style="width: 50px"></th>
+				<th style="width: 50px"></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr id="profileDisplay"></tr>
+		</tbody>
+	</table>
+
+	<div class="fixed-action-btn">
+  	<a class="btn-floating btn-large red">
+    	<i class="large material-icons">add_circle</i>
+  	</a>
+	</div>
+
+	<script src="script.js"></script>
+</body>
+</html>
