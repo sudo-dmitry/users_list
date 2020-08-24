@@ -1,0 +1,37 @@
+{
+	"users": [
+		{
+			"firstName": "Игнат",
+			"middleName": "Вазелинович",
+			"lastName": "Разрабов",
+			"dob": "21/03/1976",
+			"pob": "Сыктывкар",
+			"email": "ignat.razrabov@gmail.com",
+			"phone": "+7 (777) 777-77-77",
+			"registered": "17/08/2020",
+			"visited": "17/08/2020"
+		},
+		{
+			"firstName": "Владлен",
+			"middleName": "Иосифович",
+			"lastName": "Девелопский",
+			"dob": "13/10/1996",
+			"pob": "Йошкар-Ола",
+			"email": "vladlen@gmail.com",
+			"phone": "+7 (777) 777-77-77",
+			"registered": "19/08/2020",
+			"visited": "19/08/2020"
+		},
+		{
+			"firstName": "Пётр",
+			"middleName": "Георгиевич",
+			"lastName": "Тестовый",
+			"dob": "29/11/1982",
+			"pob": "Электросталь",
+			"email": "petr@yahoo.com",
+			"phone": "+7 (777) 777-77-77",
+			"registered": "23/08/2020",
+			"visited": "23/08/2020"
+		}
+	]
+}
