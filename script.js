@@ -1,23 +1,24 @@
-const profile = {
-		firstName: 'Игнат',
-		middleName: 'Вазелинович',
-		lastName: 'Разрабов',
-		dob: '21/03/1976',
-		pob: 'Сыктывкар',
-		email: 'ignat.razrabov@gmail.com',
-		phone: '+7 (777) 777-77-77',
-		registered: '17/08/2020',
-		visited: '17/08/2020'
-};
-
-const showProfile = document.getElementById('profileDisplay').innerHTML = `
-	<td>${profile.lastName} ${profile.firstName[0]}.${profile.middleName[0]}.</td>
-	<td>${profile.dob}</td>
-	<td>${profile.pob}</td>
-	<td>${profile.email}</td>
-	<td>${profile.phone}</td>
-	<td>${profile.registered}</td>
-	<td>${profile.visited}</td>
-	<td><i class="small material-icons btn-edit">edit</i></td>
-	<td><i class="small material-icons btn-delete">delete_forever</i></td>
-`;
+$(function(){
+	$.getJSON('api/users.json', function(data){
+		console.log('success');
+		$.each(data.users, function(i, user){
+			$('tbody').append(
+				`
+				<tr>
+					<td>${user.lastName} ${user.firstName[0]}. ${user.middleName[0]}.</td>
+					<td>${user.dob}</td>
+					<td>${user.pob}</td>
+					<td>${user.email}</td>
+					<td>${user.phone}</td>
+					<td>${user.registered}</td>
+					<td>${user.visited}</td>
+					<td><i class="small material-icons btn-edit">edit</i></td>
+					<td><i class="small material-icons btn-delete">delete_forever</i></td>
+				</tr>
+				`
+				);
+		});
+	}).error(function(){
+		console.log('error');
+	});
+});
