@@ -27,6 +27,7 @@ table {
 
 table tr {
 	cursor: default;
+	height: 65px;
 }
 
 table th {
@@ -40,14 +41,12 @@ table td {
 }
 
 table .btn-edit {
-	color: #0d47a1;
-	cursor: pointer;
+	color: #2196f3;
 	display: none;
 }
 
 table .btn-delete {
-	color: #b71c1c;
-	cursor: pointer;
+	color: #f44336;
 	display: none;
 }
 
@@ -57,4 +56,18 @@ table tr:hover .btn-edit{
 
 table tr:hover .btn-delete{
 	display: inline-block;
+}
+
+#add form button {
+	margin-top: 20px;
+	padding: 0 50px;
+}
+
+#edit form button {
+	margin-top: 20px;
+	padding: 0 50px;
+}
+
+#delete .btn {
+	margin: 0 10px;
 }

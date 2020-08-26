@@ -20,7 +20,7 @@
 				<th>ФИО</th>
 				<th>Дата рождения</th>
 				<th>Место рождения</th>
-				<th>Электронная почта</th>
+				<th>E-Mail</th>
 				<th>Телефон</th>
 				<th>Зарегистрирован</th>
 				<th>Посещение</th>
@@ -28,17 +28,115 @@
 				<th style="width: 50px"></th>
 			</tr>
 		</thead>
-		<tbody>
+		<tbody id="user-list">
 		</tbody>
 	</table>
 
 	<div class="fixed-action-btn">
-  	<a class="btn-floating btn-large red">
-    	<i class="large material-icons">add_circle</i>
+  	<a href="#add" class="btn-floating btn-large modal-trigger">
+    	<i class="large material-icons">person_add</i>
   	</a>
 	</div>
 
+	<!-- Modals -->
+	<div id="add" class="modal add">
+    <div class="modal-content">
+      <h4>Новый Пользователь</h4>
+      <form class="center">
+      	<div class="row">
+	      	<div class="input-field col s12">
+	      		<input type="text" id="lastName" class="validate">
+						<label for="lastName">Фамилия</label>
+					</div>
+					<div class="input-field col s6">
+						<input type="text" id="firstName" class="validate">
+						<label for="firstName">Имя</label>
+					</div>
+					<div class="input-field col s6">
+						<input type="text" id="middleName" class="validate">
+						<label for="middleName">Отчество</label>
+					</div>
+					<div class="input-field col s6">
+						<input type="date" id="dob" class="validate">
+						<label for="dob">Дата Рождения</label>
+					</div>
+					<div class="input-field col s6">
+						<input type="text" id="pob" class="validate">
+						<label for="pob">Место Рождения</label>
+					</div>
+					<div class="input-field col s6">
+						<input type="email" id="email" class="validate">
+						<label for="email">E-Mail</label>
+					</div>
+					<div class="input-field col s6">
+						<input type="tel" id="phone" class="validate">
+						<label for="phone">Телефон</label>
+					</div>
+					<button id="add-user" class="modal-close btn waves-effect waves-light" type="submit">Добавить</button>
+				</div>
+			</form>
+    </div>
+    <div class="modal-footer">
+      <a class="modal-close waves-effect waves-red btn-flat">Отменить</a>
+    </div>
+  </div>
+
+  <div id="edit" class="modal">
+    <div class="modal-content">
+      <h4>Изменить Данные</h4>
+      <form class="center">
+      	<div class="row">
+	      	<div class="input-field col s12">
+	      		<input type="text" name="lastName" id="editLastName" class="validate">
+						<label for="editLastName">Фамилия</label>
+					</div>
+					<div class="input-field col s6">
+						<input type="text" name="firstName" id="editFirstName" class="validate">
+						<label for="editFirstName">Имя</label>
+					</div>
+					<div class="input-field col s6">
+						<input type="text" name="middleName" id="editMiddleName" class="validate">
+						<label for="editMiddleName">Отчество</label>
+					</div>
+					<div class="input-field col s6">
+						<input type="date" name="dob" id="editDob" class="validate">
+						<label for="editDob">Дата Рождения</label>
+					</div>
+					<div class="input-field col s6">
+						<input type="text" name="pob" id="editPob" class="validate">
+						<label for="editPob">Место Рождения</label>
+					</div>
+					<div class="input-field col s6">
+						<input type="email" name="email" id="editEmail" class="validate">
+						<label for="editEmail">E-Mail</label>
+					</div>
+					<div class="input-field col s6">
+						<input type="tel" name="phone" id="editPhone" class="validate">
+						<label for="editPhone">Телефон</label>
+					</div>
+					<button class="modal-close btn blue waves-effect waves-light" type="submit" name="action">Изменить</button>
+				</div>
+			</form>
+    </div>
+    <div class="modal-footer">
+      <a class="modal-close waves-effect waves-red btn-flat">Отменить</a>
+    </div>
+  </div>
+
+  <div id="delete" class="modal">
+    <div class="modal-content">
+      <h4>ВНИМАНИЕ!</h4>
+      <p class="flow-text">Вы уверены, что хотите удалить этого пользователя?</p>
+    </div>
+    <div class="modal-footer">
+      <a class="modal-close waves-effect waves-teal btn-flat">Отмена</a>
+      <a id="delete-user" class="modal-close btn red delete">Удалить</a>
+    </div>
+  </div>
+
+
 	<script type="text/javascript" src="https://code.jquery.com/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 	<script src="script.js"></script>
 </body>
 </html>

@@ -1,6 +1,7 @@
 {
 	"users": [
 		{
+			"id": "1",
 			"firstName": "Игнат",
 			"middleName": "Вазелинович",
 			"lastName": "Разрабов",
@@ -12,6 +13,7 @@
 			"visited": "17/08/2020"
 		},
 		{
+			"id": "2",
 			"firstName": "Владлен",
 			"middleName": "Иосифович",
 			"lastName": "Девелопский",
@@ -23,6 +25,7 @@
 			"visited": "19/08/2020"
 		},
 		{
+			"id": "3",
 			"firstName": "Пётр",
 			"middleName": "Георгиевич",
 			"lastName": "Тестовый",
