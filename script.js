@@ -38,7 +38,7 @@ $(document).ready(function(){
 
 
 class User {
-	constructor(lastName, firstName, middleName, dob, pob, email, phone, registered, visited) {
+	constructor(lastName, firstName, middleName, dob, pob, email, phone, registered, visited, id) {
 		this.lastName = lastName;
 		this.firstName = firstName;
 		this.middleName = middleName;
