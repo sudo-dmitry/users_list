@@ -25,6 +25,15 @@ table {
 	margin: auto;
 }
 
+table thead tr th a i {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+table thead tr th a {
+	color: #009688;
+}
+
 table tr {
 	cursor: default;
 	height: 65px;

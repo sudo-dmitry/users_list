@@ -31,6 +31,12 @@ $(function(){
 
 $(document).ready(function(){
 	$('.modal').modal();
+	$('#delete').modal({
+    onOpenStart: function(modal, trigger) {
+        alert('🤟🏻');
+        console.log(modal, trigger);
+    }
+	});
 });
 
 ////////////////////////////////////////////////////////////////////////
@@ -53,6 +59,7 @@ class User {
 }
 
 class UI {
+	
 	addUserToList(user) {
 		const list = document.getElementById('user-list');
 		const row = document.createElement('tr');
@@ -118,6 +125,7 @@ class Store {
 
 // DOM Load Event
 document.addEventListener('DOMContentLoaded', Store.displayUsers);
+
 
 // Event Listener for add user
 document.getElementById('add').addEventListener('submit', function(e){
