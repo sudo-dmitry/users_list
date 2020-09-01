@@ -3,7 +3,7 @@ $(function(){
 		$.each(data.users, function(i, user){
 			$('tbody').append(
 				`
-				<tr>
+				<tr id="user-${user.id}">
 					<td>${user.lastName} ${user.firstName[0]}. ${user.middleName[0]}.</td>
 					<td>${user.dob}</td>
 					<td>${user.pob}</td>
@@ -12,7 +12,7 @@ $(function(){
 					<td>${user.registered}</td>
 					<td>${user.visited}</td>
 					<td><a href="#edit" class="modal-trigger" id="${user.id}"><i class="small material-icons btn-edit">edit</i></a></td>
-					<td><a href="#delete" class="modal-trigger" id="${user.id}"><i class="small material-icons btn-delete">delete_forever</i></a></td>
+					<td><a href="#delete" class="modal-trigger" data-id="${user.id}"><i class="small material-icons btn-delete">delete_forever</i></a></td>
 				</tr>
 				`
 				);
@@ -33,8 +33,12 @@ $(document).ready(function(){
 	$('.modal').modal();
 	$('#delete').modal({
     onOpenStart: function(modal, trigger) {
-        alert('🤟🏻');
-        console.log(modal, trigger);
+        let userID = trigger.dataset.id;
+        let deleteButton = document.getElementById('delete-user');
+        deleteButton.addEventListener('click', function() {
+        	const UI = new UI();
+        	UI.deleteUser(userID);
+        });
     }
 	});
 });
@@ -63,6 +67,7 @@ class UI {
 	addUserToList(user) {
 		const list = document.getElementById('user-list');
 		const row = document.createElement('tr');
+		row.setAttribute('id', `user-${user.id}`);
 		row.innerHTML = `
 			<td>${user.lastName} ${user.firstName[0]}. ${user.middleName[0]}.</td>
 			<td>${user.dob}</td>
@@ -72,7 +77,7 @@ class UI {
 			<td>${user.registered}</td>
 			<td>${user.visited}</td>
 			<td><a href="#edit" class="modal-trigger" id="${user.id}"><i class="small material-icons btn-edit">edit</i></a></td>
-			<td><a href="#delete" class="modal-trigger" id="${user.id}"><i class="small material-icons btn-delete">delete_forever</i></a></td>
+			<td><a href="#delete" class="modal-trigger" data-id="${user.id}"><i class="small material-icons btn-delete">delete_forever</i></a></td>
 		`;
 
 		list.appendChild(row);
@@ -87,6 +92,15 @@ class UI {
 		document.getElementById('email').value = '';
 		document.getElementById('phone').value = '';
 	}
+
+	deleteUser(userID) {
+		let userRow = document.getElementById(`user-${user.id}`);
+		console.log(userRow);
+	// 	if (userRow) {
+	// 		userRow.remove();
+	// 	}
+	// 	let users = storage.getItem('users');
+	 }
 }
 
 //Local Storage Class
